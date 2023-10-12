@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/alldocube/t1030m
+DEVICE_PATH := device/tecno/TECNO-LG7n
 
 # Building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -24,17 +24,17 @@ BUILD_BROKEN_DUP_RULES := true
 
 # A/B
 AB_OTA_UPDATER := true
-
 AB_OTA_PARTITIONS += \
-	boot \
-	dtbo \
-	system \
-	product \
-	vendor \
-	vbmeta \
-	vendor_boot \
-	vbmeta_system \
-	vbmeta_vendor
+    system \
+    system \
+    vendor \
+    product \
+    system_ext \
+    vendor_dlkm \
+    odm_dlkm \
+    boot \
+    vbmeta_vendor \
+    vbmeta_system
 
 # Architecture
 TARGET_ARCH := arm64
@@ -55,10 +55,10 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Assertation
-TARGET_OTA_ASSERT_DEVICE := t1030m
+TARGET_OTA_ASSERT_DEVICE := TECNO-LG7n
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := t1030m
+TARGET_BOOTLOADER_BOARD_NAME := TECNO-LG7n
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -99,9 +99,9 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
 
 BOARD_SUPER_PARTITION_SIZE := 9126805504
-BOARD_SUPER_PARTITION_GROUPS := alldocube_dynamic_partitions
-BOARD_ALLDOCUBE_DYNAMIC_PARTITIONS_PARTITION_LIST := system product vendor
-BOARD_ALLDOCUBE_DYNAMIC_PARTITIONS_SIZE := 9122611200 # (BOARD_SUPER_PARTITION_SIZE - 4194304) 4MiB
+BOARD_SUPER_PARTITION_GROUPS := tecno_dynamic_partitions
+BOARD_TECNO_DYNAMIC_PARTITIONS_PARTITION_LIST := system system vendor product system_ext vendor_dlkm odm_dlkm
+BOARD_tecno_DYNAMIC_PARTITIONS_SIZE := 9122611200 # (BOARD_SUPER_PARTITION_SIZE - 4194304) 4MiB
 
 BOARD_PARTITION_LIST := $(call to-upper, $(BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST))
 $(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := erofs))
@@ -125,8 +125,8 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Resolution
-TARGET_SCREEN_HEIGHT := 2000
-TARGET_SCREEN_WIDTH := 1200
+TARGET_SCREEN_HEIGHT := 1600
+TARGET_SCREEN_WIDTH := 720
 
 # Treble
 BOARD_VNDK_VERSION := current
