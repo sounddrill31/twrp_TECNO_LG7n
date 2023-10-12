@@ -22,14 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device specific configs
-$(call inherit-product, device/alldocube/t1030m/device.mk)
+$(call inherit-product, device/tecno/TECNO-LG7n/device.mk)
 
 # Device identifier
-PRODUCT_DEVICE := t1030m
-PRODUCT_NAME := twrp_t1030m
-PRODUCT_BRAND := alldocube
-PRODUCT_MODEL := Alldocube iPlay50 Pro
-PRODUCT_MANUFACTURER := Alldocube
+PRODUCT_DEVICE := TECNO-LG7n
+PRODUCT_NAME := twrp_TECNO-LG7n
+PRODUCT_BRAND := tecno
+PRODUCT_MODEL := tecno Pova 4
+PRODUCT_MANUFACTURER := tecno
 
 # Hide Reflash TWRP
 PRODUCT_PROPERTY_OVERRIDES += ro.twrp.vendor_boot=true
