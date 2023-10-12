@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/tecno/TECNO-LG7n
+DEVICE_PATH := device/tecno/TECNO_LG7n
 
 # Building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -55,10 +55,10 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Assertation
-TARGET_OTA_ASSERT_DEVICE := TECNO-LG7n
+TARGET_OTA_ASSERT_DEVICE := TECNO_LG7n
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := TECNO-LG7n
+TARGET_BOOTLOADER_BOARD_NAME := TECNO_LG7n
 TARGET_NO_BOOTLOADER := true
 
 # Kernel

@@ -22,11 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device specific configs
-$(call inherit-product, device/tecno/TECNO-LG7n/device.mk)
+$(call inherit-product, device/tecno/TECNO_LG7n/device.mk)
 
 # Device identifier
-PRODUCT_DEVICE := TECNO-LG7n
-PRODUCT_NAME := twrp_TECNO-LG7n
+PRODUCT_DEVICE := TECNO_LG7n
+PRODUCT_NAME := twrp_TECNO_LG7n
 PRODUCT_BRAND := tecno
 PRODUCT_MODEL := tecno Pova 4
 PRODUCT_MANUFACTURER := tecno
