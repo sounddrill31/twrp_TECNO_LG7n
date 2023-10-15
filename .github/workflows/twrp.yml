@@ -1,4 +1,7 @@
 name: Alldocube iPlay50 Pro - TWRP
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
 
 on:
   workflow_dispatch:
