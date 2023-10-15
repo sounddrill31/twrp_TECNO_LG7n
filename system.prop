@@ -54,7 +54,7 @@ ro.wifi.channels=
 # ro.build.product is obsolete; use ro.product.device
 # ro.build.product=tssi_64_armv82_tecno
 # Do not try to parse description or thumbprint
-ro.build.description=sys_tssi_64_armv82_tecno-user 12 SP1A.210812.016 278293 release-keys
+# ro.build.description=sys_tssi_64_armv82_tecno-user 12 SP1A.210812.016 278293 release-keys
 ro.vendor.tran_mes_product_name=0
 ro.vendor.tran_mes_ap_mac=36
 ro.vendor.tran_mes_server_ip=42
