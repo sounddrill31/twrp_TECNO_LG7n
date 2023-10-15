@@ -2,7 +2,7 @@
 # from generate-common-build-props
 # These properties identify this partition image.
 ####################################
-ro.product.system.brand=TECNO
+# ro.product.system.brand=TECNO
 # ro.product.system.device=FULL-64-ARMV82
 # ro.product.system.manufacturer=TECNO
 # ro.product.system.model=
