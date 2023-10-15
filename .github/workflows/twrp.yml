@@ -135,7 +135,7 @@ jobs:
     - name: Renaming into TWRP
       run: |
         cd out/target/product/${{ github.event.inputs.DEVICE_NAME }}
-        mv vendor_boot.img vendor-twrp-3.7.0_12.1-${{ github.event.inputs.DEVICE_NAME }}-${{ steps.props.outputs.date }}.img
+        mv vendor_boot.img vendor-pbrp-3.7.0_12.1-${{ github.event.inputs.DEVICE_NAME }}-${{ steps.props.outputs.date }}.img
       working-directory: ${{ steps.pwd.outputs.workdir }}
 
     - name: Upload to Release
@@ -143,13 +143,13 @@ jobs:
       with:
         artifacts: |
           workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/twrp*.img
-        name: Unofficial TWRP for Alldocube iPlay50 Pro(t1030m) - Build ${{ steps.props.outputs.date }} 
+        name: Unofficial PBRP for Tecno Pova 4(TECNO_LG7n) - Build ${{ steps.props.outputs.date }} 
         draft: false
         prerelease: true
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ steps.props.outputs.date }}-${{ github.run_id }}
         body: |
-          ## TWRP v3.7.0_12.1-t1030m-${{ steps.props.outputs.date }}
+          ## PBRP v3.7.0_12.1-TECNO-LG7n-${{ steps.props.outputs.date }}
          
 
     - name: Github Release URL
