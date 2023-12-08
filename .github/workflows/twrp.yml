@@ -142,7 +142,7 @@ jobs:
       uses: ncipollo/release-action@v1.11.1
       with:
         artifacts: |
-          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/twrp*.img
+          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*twrp*.img
         name: Unofficial TWRP for Alldocube iPlay50 Pro(t1030m) - Build ${{ steps.props.outputs.date }} 
         draft: false
         prerelease: true
